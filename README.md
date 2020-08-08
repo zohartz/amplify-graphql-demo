@@ -27,7 +27,7 @@ amplify init
 ```
 
 * creates a directory called amplify that stores our backend definition. 
-creates a file called aws-exports.js it that holds all the configuration for the services we create with Amplify. This is how the Amplify client is able to get the necessary information about your backend services.
+creates a file called aws-exports.js which holds all the configuration for the services we create with Amplify. This is how the Amplify client is able to get the necessary information about our backend services.
 
 ### `Add API & DB ( DynamoDB && graphql)`
 ```
