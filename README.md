@@ -1,68 +1,67 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a demo of aws amplify and graphql 
+A note management App 
 
-## Available Scripts
+An overview presentation on Graphql and AWS Amplify [slide](https://docs.google.com/presentation/d/1NeHLap4_IGZGF0EGUxDs_07ru1ui_BbsMQMS3D8lxhs/edit#slide=id.g8caf3901d4_0_76)
 
-In the project directory, you can run:
+## Quick atart with amplify and appsync 
 
-### `yarn start`
+### `amplify installation` 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+npm install -g @aws-amplify/cli
+amplify configure
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### `Create new react App ` 
+```
+npx create-react-app amplify-garphql-demo 
+&& cd amplify-garphql-demo
 
-### `yarn test`
+npm install aws-amplify @aws-amplify/ui-react
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
 
-### `yarn build`
+### `Initialize new backend `
+```
+amplify init
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* creates a directory called amplify that stores our backend definition. 
+creates a file called aws-exports.js it that holds all the configuration for the services we create with Amplify. This is how the Amplify client is able to get the necessary information about your backend services.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### `Add API & DB ( DynamoDB && graphql)`
+```
+amplify add api
+```
+* Creates schema file on backend folder which specify our schema 
+We will use the @modle directive which defines the basic CRUD operation and the necessary resolvers 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `Deploying the API` 
+```
+amplify push 
 
-### `yarn eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### `Add authentication service (amazon cognito) `
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+amplify add auth
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### `Deploying authentication`
+```
+amplify push
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### `Deploy and host app`
 
-## Learn More
+```
+amplify add hosting
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### `Publish the app`
+```
+amplify publish
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
