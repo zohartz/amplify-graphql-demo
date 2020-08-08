@@ -1,9 +1,9 @@
-This project is a demo of aws amplify and graphql 
-A note management App 
+This project is a demo of aws amplify and graphql.
+## A note management App 
 
-An overview presentation on Graphql and AWS Amplify [slide](https://docs.google.com/presentation/d/1NeHLap4_IGZGF0EGUxDs_07ru1ui_BbsMQMS3D8lxhs/edit?usp=sharing)
+My overview presentation on Graphql and AWS Amplify : [slide](https://docs.google.com/presentation/d/1NeHLap4_IGZGF0EGUxDs_07ru1ui_BbsMQMS3D8lxhs/edit?usp=sharing)
 
-## Quick atart with amplify and appsync 
+## Quick start with amplify and appsync 
 
 ### `amplify installation` 
 
